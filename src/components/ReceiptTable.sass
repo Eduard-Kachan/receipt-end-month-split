@@ -1,0 +1,35 @@
+.receiptTable
+  border-spacing: 0 2px
+  position: relative
+
+  &__itemName
+    width: 100%
+    font-weight: 600
+    text-align: left
+
+  &__item
+    font-size: 18px
+    text-align: right
+
+    & td
+      background-color: #fff
+      padding: 22px 20px
+
+      &:first-child
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+
+        &:before
+          content: ""
+          position: absolute
+          width: 100%
+          height: 69px
+          left: 0
+          transform: translateY(-25px)
+          z-index: -1
+          border-radius: 5px
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08)
+
+      &:last-child
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px

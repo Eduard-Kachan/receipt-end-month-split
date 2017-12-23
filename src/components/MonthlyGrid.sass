@@ -1,0 +1,14 @@
+@import "../styles/variables"
+
+.monthlyGrid
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: repeat(3, 150px)
+  grid-gap: $gutter
+
+  &__cell
+    color: #fff
+    text-transform: uppercase
+    text-decoration: none !important
+    padding: $gutter
+    border-radius: $border-radius

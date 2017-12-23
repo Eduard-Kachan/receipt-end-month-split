@@ -1,0 +1,11 @@
+.monthlyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  grid-gap: 1em; }
+  .monthlyGrid__cell {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    padding: 1em;
+    border-radius: 1em; }
