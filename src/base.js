@@ -1,9 +1,9 @@
-import Rebase from 're-base';
+import Rebase from 're-base'
 
 const base = Rebase.createClass({
-  apiKey: "AIzaSyAXtclT5UUlrwf8NEmF0ceeaAIQPAzwzlc",
-  authDomain: "receipt-end-month-split.firebaseapp.com",
-  databaseURL: "https://receipt-end-month-split.firebaseio.com"
+  apiKey: "KEY",
+  authDomain: "DOMAIN",
+  databaseURL: "URL"
 })
 
-export default base;
+export default base
