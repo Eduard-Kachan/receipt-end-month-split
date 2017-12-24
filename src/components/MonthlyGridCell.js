@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/utilities/gradient.css'
+import '../styles/shadow.css'
 import PropTypes from 'prop-types'
 
 const MonthlyGridCell = (props) => {
@@ -16,7 +17,10 @@ const MonthlyGridCell = (props) => {
   }
 
   return (
-    <Link className={`monthlyGrid__cell Gradient-linerGradient-${props.month}`} to={url} >{props.month}{props.isEmpty ? ', empty' : null}</Link>
+    <Link className={`monthlyGrid__cell shadow__parent Gradient-linerGradient-${props.month}`} to={url} >
+      {props.month}{props.isEmpty ? ', empty' : null}
+      <div className={`shadow shadow--${props.month}`}/>
+    </Link>
   )
 }
 
