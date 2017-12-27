@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../styles/utilities/form.css'
 
 class PriceInput extends React.Component {
 
@@ -13,14 +14,10 @@ class PriceInput extends React.Component {
   }
 
   render() {
-    const className = this.props.className || ''
-
     return(
 
-      <label
-        htmlFor='receiptFormPrice'
-        className={`receipt-form__label ${className}`}>
-        Price<br/>
+      <label htmlFor='receiptFormPrice'>
+        <span className='Text-textTransform-uppercase'>Price</span>
 
         <input
           id='receiptFormPrice'
@@ -29,7 +26,8 @@ class PriceInput extends React.Component {
           min='0'
           placeholder='Price'
           required={(this.props.isRequired)}
-          onChange={this.onChange}/>
+          onChange={this.onChange}
+          className='priceInput'/>
 
       </label>
     )

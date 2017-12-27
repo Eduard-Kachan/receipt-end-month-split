@@ -6,50 +6,6 @@
     margin: 0
     margin-bottom: 15px
 
-  &__form
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr
-    grid-template-rows: auto auto 15px auto
-    grid-column-gap: 2px
-    grid-row-gap: 2px
-    /*margin: 65px*/
-    grid-template-areas: "name name name" "price date date" ". . ." ". submit ."
-
-    input, select
-      width: 100%
-      border: 0
-      font-size: 18px
-      height: 25px
-      line-height: 26px
-      background: transparent
-
-  &__nameInput
-    grid-area: name
-
-  &__priceInput
-    grid-area: price
-
-  &__dateInput
-    grid-area: date
-
-  &__submitInput
-    grid-area: submit
-
-  &__label
-    font-size: 10px
-    font-weight: bold
-    text-transform: uppercase
-    background-color: #fff
-    color: #c8ceda
-    border-radius: 5px
-    padding: 20px 15px
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08)
-
-  &__select
-    -webkit-appearance: none
-    -moz-appearance: none
-    /*appearance: none */
-
   &__button
     border: 0
     line-height: 40px

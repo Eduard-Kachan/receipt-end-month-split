@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../styles/utilities/form.css'
 
 
 class DateSelect extends React.Component {
@@ -16,21 +17,20 @@ class DateSelect extends React.Component {
   render() {
     const today = new Date()
     const defaultDate = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()
-    const className = this.props.className || ''
 
     return(
 
-      <label
-        htmlFor='receiptFormDate'
-        className={`receipt-form__label ${className}`}>
-        Date<br/>
+      <label htmlFor='receiptFormDate'>
+
+        <span className='Text-textTransform-uppercase'>Date</span>
 
         <input
           id='receiptFormDate'
           defaultValue={this.props.date || defaultDate}
           type='date'
           required={(this.props.isRequired)}
-          onChange={this.onChange}/>
+          onChange={this.onChange}
+          className='dateSelect'/>
 
       </label>
     )

@@ -1,0 +1,16 @@
+.userSelect {
+  display: flex; }
+  .userSelect__label {
+    padding: 5px;
+    flex: 1;
+    text-align: center; }
+  .userSelect__input[type="radio"] {
+    display: none; }
+    .userSelect__input[type="radio"]:checked + .userSelect__label {
+      background: green; }
+
+.priceInput {
+  width: 100%; }
+
+.dateSelect {
+  width: 100%; }

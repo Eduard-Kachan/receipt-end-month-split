@@ -1,36 +1,61 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../styles/utilities/form.css'
 
 class UserSelect extends React.Component {
 
   constructor() {
     super()
+
     this.onChange = this.onChange.bind(this)
+
+    this.state = {
+      selectedOption: 'Eduard'
+    }
   }
 
   onChange(e) {
-    this.props.returnValue({ 'owner' : e.target.value })
+    this.setState({
+      selectedOption: e.target.value
+    })
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    this.props.returnValue({ 'owner' : nextState.selectedOption })
+    return true
   }
 
   render() {
-    const className = this.props.className || ''
-
     return(
-      <label
-        htmlFor='receiptFormOwner'
-        className={`receipt-form__label ${className}`}>
-        Owner<br/>
-        <select
-          id='receiptFormOwner'
-          defaultValue={this.props.owner}
-          className='receipt-form__select'
-          required={(this.props.isRequired)}
-          onChange={this.onChange}>
+      <div>
+        <span className='Text-textTransform-uppercase'>Owner</span>
 
-          <option key='Eduard' value='Eduard' >Eduard</option>
-          <option key='Tanya' value='Tanya'>Tanya</option>
-        </select>
-      </label>
+        <radiogroup className='userSelect' onChange={this.onChange}>
+
+          <input
+            className='userSelect__input'
+            id='eduard' type='radio'
+            name='userSelect'
+            value='Eduard'
+            checked={this.state.selectedOption === 'Eduard'}
+            required={true}
+            onChange={this.onChange}/>
+
+          <label className='userSelect__label' htmlFor='eduard'>Eduard</label>
+
+          <input
+            className='userSelect__input'
+            id='tanya'
+            type='radio'
+            name='userSelect'
+            value='Tanya'
+            checked={this.state.selectedOption === 'Tanya'}
+            onChange={this.onChange}/>
+
+          <label className='userSelect__label' htmlFor='tanya'>Tanya</label>
+
+        </radiogroup>
+      </div>
     )
   }
 }
@@ -38,8 +63,8 @@ class UserSelect extends React.Component {
 UserSelect.propTypes = {
   returnValue: PropTypes.func.isRequired,
   owner: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  isRequired: PropTypes.bool
+  // className: PropTypes.string,
+  // isRequired: PropTypes.bool
 }
 
 

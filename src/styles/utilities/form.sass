@@ -1,0 +1,19 @@
+.userSelect
+  display: flex
+
+  &__label
+    padding: 5px
+    flex: 1
+    text-align: center
+
+  &__input[type="radio"]
+    display: none
+
+    &:checked + .userSelect__label
+      background: green
+
+.priceInput
+  width: 100%
+
+.dateSelect
+  width: 100%
