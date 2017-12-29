@@ -30,7 +30,6 @@ class PriceInput extends React.Component {
     if (this.state.value === '') {
       value = ''
     } else {
-
       if (this.state.value.length <= 2) {
         value = '¢' + this.state.value
       } else {

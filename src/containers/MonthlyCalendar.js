@@ -27,7 +27,7 @@ const MonthlyCalendar = (props) => {
             year={year}
             month={month}
             removeReceipt={props.removeReceipt}
-            receipts={props.calendarRecords[month]} />
+            receipts={props.calendarRecords[month] || {}} />
         </div>
       </div>
     </div>

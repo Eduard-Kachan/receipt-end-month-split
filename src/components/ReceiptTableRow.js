@@ -5,9 +5,9 @@ import { formatPrice } from '../helpers'
 const ReceiptListItem = (props) => {
   return(
     <tr className="receiptTable__item">
-      <td className="receiptTable__itemName">{props.receipt.owner}</td>
-      <td>{formatPrice(props.receipt.price)}</td>
-      <td>{props.receipt.date || null}</td>
+      <td className="receiptTable__itemName text-19">{props.receipt.owner}</td>
+      <td className='text-19'>{formatPrice(props.receipt.price)}</td>
+      <td className='text-19'>{props.receipt.date || null}</td>
       <td><Link to={{
         pathname: `/update-receipt/${props.year}-${props.month}/${props.receiptId}`,
         state: { modal: true }
