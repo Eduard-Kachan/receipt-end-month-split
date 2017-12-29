@@ -1,9 +1,6 @@
 import React from 'react'
-
-
-import UserTotal from './MonthlyTotalUser'
-import UserOwes from './MonthlyTotalUserOwes'
-// import ReceiptListItem from './ReceiptListItem'
+import {formatPrice} from "../helpers";
+import './MonthlyTotal.css'
 
 class MonthlySum extends React.Component {
   constructor(props) {
@@ -31,27 +28,34 @@ class MonthlySum extends React.Component {
     const tanya = this.monthlyTotal(this.props.receipts, 'Tanya');
     const eduard = this.monthlyTotal(this.props.receipts, 'Eduard');
 
-    let owes = ''
     let owesAmount = 0
 
     if (eduard > tanya) {
-      owes = 'Tanya';
       owesAmount = (eduard - tanya) / 2
     } else {
-      owes = 'Eduard';
       owesAmount = (tanya - eduard) / 2
     }
 
-    const divStyle = {
-      display: 'flex'
-    }
-
     return(
-      <div style={divStyle}>
-        <UserTotal name="Eduard" amount={eduard}/>
-        <UserTotal name="Tanya" amount={tanya}/>
-        <UserOwes name={owes} amount={owesAmount}/>
-      </div>
+      <table className='monthlyTotal'>
+
+        <tbody className='text-19'>
+          <tr>
+            <td>Eduard's sum:</td>
+            <td className='monthlyTotal__tr-right'>{formatPrice(eduard)}</td>
+          </tr>
+          <tr>
+            <td>Tanya's sum:</td>
+            <td className='monthlyTotal__tr-right'>{formatPrice(tanya)}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr className='monthlyTotal__foot m-b-15'>
+            <td className='text-19 monthlyTotal__tr-left'>Total amount</td>
+            <td className='text-31 monthlyTotal__tr-right'>{formatPrice(owesAmount)}</td>
+          </tr>
+        </tfoot>
+      </table>
     )
   }
 }
