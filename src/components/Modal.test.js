@@ -48,7 +48,7 @@ describe('Modal', () => {
   it('click `go back` button and go back in history', () => {
     const wrapper = modal()
     spy = jest.spyOn(wrapper.instance().props.history, 'goBack')
-    wrapper.find('button.modal__close-button').simulate('click', { stopPropagation() {} })
+    wrapper.find('button.modal__closeButton').simulate('click', { stopPropagation() {} })
     expect(spy).toHaveBeenCalled()
   })
 
