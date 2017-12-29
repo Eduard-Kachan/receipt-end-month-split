@@ -1,0 +1,9 @@
+.monthlyTotal {
+  border-collapse: collapse; }
+  .monthlyTotal__foot {
+    border-top: 1px solid white; }
+  .monthlyTotal td {
+    text-align: right; }
+  .monthlyTotal td:first-child {
+    padding-right: 100px;
+    text-align: left; }

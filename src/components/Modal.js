@@ -46,4 +46,4 @@ Modal.propTypes = {
   history: PropTypes.object.isRequired
 }
 
-export default Modal;
+export default Modal

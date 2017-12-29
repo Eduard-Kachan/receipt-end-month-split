@@ -17,7 +17,7 @@ const MonthlyGridCell = (props) => {
   }
 
   return (
-    <Link className={`monthlyGrid__cell shadow__parent Gradient-linerGradient-${props.month}`} to={url} >
+    <Link className={`text-19 monthlyGrid__cell shadow__parent Gradient-linerGradient-${props.month}`} to={url} >
       {props.month}{props.isEmpty ? ', empty' : null}
       <div className={`shadow shadow--${props.month}`}/>
     </Link>

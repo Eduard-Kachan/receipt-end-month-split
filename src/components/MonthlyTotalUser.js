@@ -10,8 +10,8 @@ const UserTotal = (props) => {
 
   return(
     <div style={divStyle}>
-      <span>{props.name}'s sum:</span>
-      <span className='Title-titleHeading-1 Text-textTransform-uppercase'>{formatPrice(props.amount)}</span>
+      <span className='text-19'>{props.name}'s sum:</span>
+      <span className='Title-titleHeading-1 Text-textTransform-uppercase text-31'>{formatPrice(props.amount)}</span>
     </div>
   )
 }
