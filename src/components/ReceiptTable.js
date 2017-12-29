@@ -1,7 +1,6 @@
 import React from 'react'
 import ReceiptListItem from './ReceiptTableRow'
 import './ReceiptTable.css'
-import ReceiptForm from './ReceiptForm'
 import PropTypes from 'prop-types'
 
 const ReceiptList = (props) => {
@@ -25,7 +24,7 @@ const ReceiptList = (props) => {
 }
 
 ReceiptList.propTypes = {
-  year: PropTypes.number.isRequired,
+  year: PropTypes.string.isRequired,
   month: PropTypes.string.isRequired,
   receipts: PropTypes.object.isRequired
 }

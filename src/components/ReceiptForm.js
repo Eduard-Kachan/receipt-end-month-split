@@ -13,7 +13,6 @@ class ReceiptForm extends React.Component {
     this.updateReceipt = this.updateReceipt.bind(this)
     this.submitForm = this.submitForm.bind(this)
 
-    // saved as instance, because it should be part of render
     this.receipt = {
       owner: this.props.owner || 'Eduard',
       price: this.props.price || null,
@@ -50,33 +49,39 @@ class ReceiptForm extends React.Component {
     return (
       <div>
 
-        <h2 className="receiptForm__title">{this.props.title}</h2>
+        <h2 className="receiptForm__title text-31 m-b-15">{this.props.title}</h2>
 
         <form
           className="receiptForm__form"
           ref={(input) => this.receiptForm = input }
           onSubmit={(e) => this.submitForm(e)}>
 
-          <OwnerSelect
-            owner={this.props.owner || 'Eduard'}
-            isRequired={true}
-            className='receiptForm__nameInput'
-            returnValue={this.updateReceipt}/>
+          <div className='m-b-15'>
+            <OwnerSelect
+              owner={this.props.owner || 'Eduard'}
+              isRequired={true}
+              className='receiptForm__nameInput'
+              returnValue={this.updateReceipt}/>
+          </div>
 
-          <PriceInput
-            price={this.props.price}
-            isRequired={true}
-            className='receiptForm__priceInput'
-            returnValue={this.updateReceipt}/>
+          <div className='m-b-15'>
+            <PriceInput
+              price={this.props.price}
+              isRequired={true}
+              className='receiptForm__priceInput'
+              returnValue={this.updateReceipt}/>
+          </div>
 
-          <DateSelect
-            date={this.props.date}
-            isRequired={true}
-            className='receiptForm__dateInput'
-            returnValue={this.updateReceipt}/>
+          <div className='m-b-15'>
+            <DateSelect
+              date={this.props.date}
+              isRequired={true}
+              className='receiptForm__dateInput'
+              returnValue={this.updateReceipt}/>
+          </div>
 
           <button
-            className="receiptForm__submitInput receiptForm__button"
+            className="receiptForm__submitInput receiptForm__button text-19"
             type="submit">
             {this.props.submitButtonMessage}
           </button>

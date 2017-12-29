@@ -28,7 +28,7 @@ class UserSelect extends React.Component {
   render() {
     return(
       <div>
-        <span className='Text-textTransform-uppercase'>Owner</span>
+        <span className='Text-textTransform-uppercase text-12'>Owner</span>
 
         <radiogroup className='userSelect' onChange={this.onChange}>
 
@@ -41,7 +41,7 @@ class UserSelect extends React.Component {
             required={true}
             onChange={this.onChange}/>
 
-          <label className='userSelect__label' htmlFor='eduard'>Eduard</label>
+          <label className='userSelect__label text-19' htmlFor='eduard'>Eduard</label>
 
           <input
             className='userSelect__input'
@@ -52,7 +52,7 @@ class UserSelect extends React.Component {
             checked={this.state.selectedOption === 'Tanya'}
             onChange={this.onChange}/>
 
-          <label className='userSelect__label' htmlFor='tanya'>Tanya</label>
+          <label className='userSelect__label text-19' htmlFor='tanya'>Tanya</label>
 
         </radiogroup>
       </div>
@@ -62,9 +62,7 @@ class UserSelect extends React.Component {
 
 UserSelect.propTypes = {
   returnValue: PropTypes.func.isRequired,
-  owner: PropTypes.string.isRequired,
-  // className: PropTypes.string,
-  // isRequired: PropTypes.bool
+  owner: PropTypes.string.isRequired
 }
 
 
