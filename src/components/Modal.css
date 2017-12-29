@@ -11,7 +11,13 @@
   .modal__closeButton {
     position: absolute;
     top: 30px;
-    right: 20px; }
+    right: 20px;
+    width: 31px;
+    height: 31px;
+    background: black;
+    border: 0;
+    border-radius: 50%;
+    padding: 5px; }
   .modal__background {
     position: fixed;
     top: 0;

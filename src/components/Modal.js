@@ -28,7 +28,10 @@ class Modal extends React.Component {
       <div className='modal__background' ref={(div) => this.modalBackground = div} onClick={this.clickOutsideOfModal}>
         <div className='modal'>
           <button type='button' onClick={this.goBack} className='modal__closeButton'>
-            Close
+            <svg width='20' height='20'>
+              <line x1='1' x2='19' y1='1' y2='19' stroke='white' strokeWidth='2'/>
+              <line x1='1' x2='19' y1='19' y2='1' stroke='white' strokeWidth='2'/>
+            </svg>
           </button>
           {this.props.children}
         </div>
