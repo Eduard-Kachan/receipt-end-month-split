@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../styles/utilities/gradient.css'
-import '../styles/shadow.css'
 import PropTypes from 'prop-types'
 
 const MonthlyGridCell = (props) => {

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../styles/utilities/form.css'
 
 
 class DateSelect extends React.Component {

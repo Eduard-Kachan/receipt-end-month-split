@@ -1,6 +1,5 @@
 import React from 'react'
 import ReceiptListItem from './ReceiptTableRow'
-import './ReceiptTable.css'
 import PropTypes from 'prop-types'
 
 const ReceiptList = (props) => {

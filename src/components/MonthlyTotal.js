@@ -1,17 +1,16 @@
 import React from 'react'
-import {formatPrice} from "../helpers";
-import './MonthlyTotal.css'
+import {formatPrice} from "../helpers"
 
 class MonthlySum extends React.Component {
   constructor(props) {
     super(props)
 
-    this.monthlyTotal = this.monthlyTotal.bind(this);
+    this.monthlyTotal = this.monthlyTotal.bind(this)
   }
 
   monthlyTotal(receipts, user) {
-    const receiptsList = receipts || {};
-    const receiptsKeys = Object.keys(receiptsList);
+    const receiptsList = receipts || {}
+    const receiptsKeys = Object.keys(receiptsList)
 
     const total = receiptsKeys
       .filter((key) => receiptsList[key].owner === user)
@@ -25,8 +24,8 @@ class MonthlySum extends React.Component {
   }
 
   render() {
-    const tanya = this.monthlyTotal(this.props.receipts, 'Tanya');
-    const eduard = this.monthlyTotal(this.props.receipts, 'Eduard');
+    const tanya = this.monthlyTotal(this.props.receipts, 'Tanya')
+    const eduard = this.monthlyTotal(this.props.receipts, 'Eduard')
 
     let owesAmount = 0
 

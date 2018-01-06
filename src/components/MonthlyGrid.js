@@ -1,7 +1,6 @@
 import React from 'react'
 import GridCell from './MonthlyGridCell'
 import { monthsOfYear } from '../helpers'
-import './MonthlyGrid.css'
 import PropTypes from 'prop-types'
 
 

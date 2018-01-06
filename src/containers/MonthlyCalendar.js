@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom'
 import ReceiptTable from '../components/ReceiptTable'
 import MonthlyTotal from '../components/MonthlyTotal'
 import Navigation from '../components/DateNavigation'
-import '../styles/scrollContentArea.css'
-import '../styles/utilities/gradient.css'
-import '../styles/utilities/text.css'
 
 const MonthlyCalendar = (props) => {
 

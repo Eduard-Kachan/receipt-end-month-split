@@ -3,7 +3,6 @@ import OwnerSelect from '../form-controls/OwnerSelect'
 import PriceInput from '../form-controls/PriceInput'
 import DateSelect from '../form-controls/DateSelect'
 import PropTypes from 'prop-types'
-import './ReceiptForm.css'
 
 class ReceiptForm extends React.Component {
 

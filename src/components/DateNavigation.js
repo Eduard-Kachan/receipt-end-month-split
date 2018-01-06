@@ -1,7 +1,4 @@
 import React from 'react'
-import './DateNavigation.css'
-import '../styles/utilities/title.css'
-import '../styles/utilities/text.css'
 
 const DateNavigation = (props) => {
   return (
