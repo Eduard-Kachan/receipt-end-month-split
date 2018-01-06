@@ -21,7 +21,7 @@ class DateSelect extends React.Component {
 
       <label htmlFor='receiptFormDate'>
 
-        <span className='Text-textTransform-uppercase text-12'>Date</span>
+        <span className='Text-textTransform-uppercase text-12'>Date issued</span>
 
         <input
           id='receiptFormDate'

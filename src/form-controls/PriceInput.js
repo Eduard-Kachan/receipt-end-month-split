@@ -39,7 +39,7 @@ class PriceInput extends React.Component {
     return(
 
       <label htmlFor='receiptFormPrice'>
-        <span className='Text-textTransform-uppercase text-12'>Price</span>
+        <span className='Text-textTransform-uppercase text-12'>Amount paid</span>
 
         <input
           id='receiptFormPrice'
