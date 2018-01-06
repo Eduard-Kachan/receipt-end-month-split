@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ReceiptTable from '../components/ReceiptTable'
 import MonthlyTotal from '../components/MonthlyTotal'
 import Navigation from '../components/DateNavigation'
@@ -19,6 +20,10 @@ const MonthlyCalendar = (props) => {
             <Navigation year={year} month={month}/>
           </div>
           <MonthlyTotal receipts={props.calendarRecords[month]} />
+          <Link className='button button--link button--white text-19' to={{
+            pathname: `/add-receipt/${year}-${month}`,
+            state: { modal: true }
+          }}>Add new</Link>
         </div>
       </header>
       <div className='scrollContentAreaColumn__scrollArea'>

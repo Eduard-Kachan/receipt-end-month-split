@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import App from './containers/App';
 
 import './styles/global.css'
+import './styles/utilities/button.css'
 
 render((
   <Router>
